@@ -1,0 +1,140 @@
+@import "./base/base";
+
+// first container
+.container {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	transition: all 1s ease-out;
+
+	.downarrow-icon {
+		width: -moz-fit-content;
+		width: fit-content;
+		height: max-content;
+		position: absolute;
+		bottom: 100px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		font-size: 3.5em;
+		color: #fff;
+		transition: transform 0.1s ease-in-out;
+		&:active {
+			transform: scale(0.9);
+		}
+		&:hover {
+			transition: color 300ms ease-out;
+			color: darken($color: #fff, $amount: 20%);
+		}
+	}
+
+	.btn-container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		height: 100px;
+
+		.button {
+			width: 50vw;
+			white-space: wrap;
+			border-radius: 20px;
+			font-family: "Rubik", sans-serif;
+			outline: none;
+			padding: 0.5em;
+			font-size: 1.5em;
+			box-shadow: 4px 4px 12px rgba($color: #000000, $alpha: 0.2);
+			transition: all 0.2s ease-out;
+			&.yes {
+				background-color: #fff;
+				&:hover {
+					background-color: #5cf60a;
+					color: #fff;
+					cursor: pointer;
+				}
+				&:active {
+					transform: scale(0.9);
+					border: 2px solid #21a005;
+				}
+			}
+			&.no {
+				position: relative;
+				background-color: #fff;
+				&hover {
+					background-color: #ed0f0f;
+					color: #fff;
+					cursor: pointer;
+				}
+				&:active {
+					transform: scale(0.9);
+					border: 2px solid #880505;
+				}
+			}
+		}
+	}
+
+	.wrapper {
+		width: -moz-fit-content;
+		width: fit-content;
+		position: absolute;
+		top: 20vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.definition-you {
+			width: 100%;
+			text-align: center;
+			font-size: 2em;
+		}
+
+		img {
+			width: 30vw;
+			&:is(.hanako-img) {
+				width: 65vw;
+				border-radius: 5%;
+			}
+		}
+
+		h1 {
+			font-size: 2em;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		.downarrow-icon {
+			font-size: 4em;
+		}
+		.btn-container {
+			.button {
+				width: 20vw;
+				font-size: 2em;
+			}
+		}
+		.wrapper {
+			.definition-you {
+				width: 100%;
+				text-align: center;
+				font-size: 2em;
+			}
+			img {
+				width: 200px;
+
+				&:is(.hanako-img) {
+					width: 25vw;
+				}
+			}
+
+			h1 {
+				font-size: 3em;
+			}
+		}
+	}
+}

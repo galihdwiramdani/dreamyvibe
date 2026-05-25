@@ -1,0 +1,35 @@
+@import "./scss/base/base";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+html {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("https://images.pexels.com/photos/1631065/pexels-photo-1631065.jpeg?cs=srgb&dl=pexels-magda-ehlers-1631065.jpg&fm=jpg")
+			no-repeat;
+	background-size: auto;
+	background-position: 30%;
+	background-attachment: fixed;
+	font-family: "Rubik", sans-serif;
+	overflow: auto;
+
+	body {
+		position: relative;
+		overflow: hidden;
+	}
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	height: fit-content;
+	width: auto;
+	overflow: visible;
+	background: none;
+	border: 0;
+}
